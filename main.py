@@ -1,4 +1,3 @@
-import pandas as pd
 import streamlit as st
 from joblib import load
 from db_helper import recommend,fetch_movie_poster
