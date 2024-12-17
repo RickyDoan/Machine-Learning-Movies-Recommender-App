@@ -53,7 +53,7 @@ if st.button("Get Similar Movie Suggestions"):
         for i, movie in enumerate(recommended_movies):
             with cols[i % 3]:  # Loop through columns
                 poster_url = fetch_movie_poster(movie)  # Fetch poster
-                st.image(poster_url, caption=movie, use_container_width=True)
+                st.image(poster_url, caption=movie, use_column_width=True)
 
             # Create new rows every 3 movies
             if (i + 1) % 3 == 0 and i != len(recommended_movies) - 1:
