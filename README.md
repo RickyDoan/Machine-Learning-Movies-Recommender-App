@@ -30,4 +30,4 @@ To get started, clone the repository and install the required dependencies:
 
 ```bash
 git clone https://github.com/your-username/ml-movies-recommender.git
-cd ml-movies-recommender
+cd ML-Movies-Recommender-App
