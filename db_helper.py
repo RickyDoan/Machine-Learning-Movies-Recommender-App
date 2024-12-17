@@ -8,14 +8,14 @@ similarity = load_data['similarity']
 import requests
 
 # Function to recommend movies
-def recommend(selected_movie):
-    # Logic to compute recommendations based on similarity
-    # Example: similarity is precomputed
-    idx = df[df['original_title'] == selected_movie].index[0]
-    movie_scores = list(enumerate(similarity[idx]))
-    sorted_scores = sorted(movie_scores, key=lambda x: x[1], reverse=True)
-    recommended_indices = [x[0] for x in sorted_scores[1:10]]  # Top 10 movies
-    return df['original_title'].iloc[recommended_indices].tolist()
+def recommend(title):
+    list_movies = []
+    index = df[df['original_title'] == title].index[0]
+    distances = sorted([*enumerate(similarity[index])], key=lambda x: x[1], reverse=True)
+    for value in distances[1:10]:
+        get = df.iloc[value[0]]['original_title']
+        list_movies.append(get)
+    return list_movies
 
 
 
