@@ -12,9 +12,32 @@ input_data = dataframe['original_title'].values
 st.title('Movies Recommender')
 select_input = st.selectbox("Input any film",[""] + input_data)
 
-
+# The blue button
+st.markdown(
+    """
+    <style>
+    div.stButton > button:first-child {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px; /* Rounded corners */
+    }
+    div.stButton > button:first-child:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 #Crete poster corresponding with input title
-if st.button("Recommend"):
+if st.button("Get Similar Movie Suggestions"):
     call_processing = recommend(select_input)  # Get recommended movies
     st.markdown("### Recommended Movies:")
 
