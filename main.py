@@ -14,7 +14,7 @@ input_data = dataframe['original_title'].values
 st.title('Movies Recommender')
 
 # Dropdown for movie input
-select_input = st.selectbox("Input any film", [""] + list(input_data))
+select_input = st.selectbox("Input any film", [""] + input_data)
 
 # Custom button style
 st.markdown(
