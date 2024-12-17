@@ -46,7 +46,7 @@ if st.button("Get Similar Movie Suggestions"):
     if select_input:
         # Get recommendations
         recommended_movies = recommend(select_input)
-        st.markdown("### Recommended Movies:")
+        st.markdown("Recommended Movies:")
 
         # Display movies with posters (3 per row)
         cols = st.columns(3)  # Create 3 columns
