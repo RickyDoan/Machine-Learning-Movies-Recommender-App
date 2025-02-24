@@ -1,6 +1,6 @@
 # ML Movies Recommender System
 ### Play with app via url : https://ricky-ml-movies-recommender.streamlit.app/
-
+![](https://github.com/RickyDoan/Machine-Learning-Movies-Recommender-App/blob/main/movies-rec.gif)
 ### Overview
 
 The ML Movies Recommender System is a machine learning-based application that recommends movies based on user input. By utilizing the power of cosine similarity and content-based filtering, the system suggests movies similar to the one the user selects.
